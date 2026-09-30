@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "rows": 100000,
+    "columns": [
+      "ph",
+      "hardness",
+      "tds",
+      "chlorine",
+      "sulfate",
+      "conductivity",
+      "organic_carbon",
+      "trihalomethanes",
+      "turbidity",
+      "potability"
+    ],
+    "missing_per_column": {
+      "ph": 3121,
+      "hardness": 0,
+      "tds": 2384,
+      "chlorine": 0,
+      "sulfate": 813,
+      "conductivity": 1598,
+      "organic_carbon": 0,
+      "trihalomethanes": 0,
+      "turbidity": 0,
+      "potability": 0
+    },
+    "duplicate_rows": 0,
+    "class_counts": {
+      "0": 92384,
+      "1": 7616
+    }
+  },
+  "cv": {
+    "Logistic Regression": {
+      "cv_roc_auc": 0.8875,
+      "best_params": {
+        "clf__C": 10
+      }
+    },
+    "KNN": {
+      "cv_roc_auc": 0.9594,
+      "best_params": {
+        "clf__n_neighbors": 31,
+        "clf__weights": "distance"
+      }
+    },
+    "Decision Tree": {
+      "cv_roc_auc": 0.993,
+      "best_params": {
+        "clf__max_depth": 10,
+        "clf__min_samples_leaf": 5
+      }
+    }
+  },
+  "test": {
+    "Logistic Regression": {
+      "accuracy": 0.7796,
+      "balanced_accuracy": 0.8072,
+      "precision_unsafe": 0.9832,
+      "recall_unsafe": 0.7746,
+      "f1_unsafe": 0.8666,
+      "roc_auc": 0.8883
+    },
+    "KNN": {
+      "accuracy": 0.9437,
+      "balanced_accuracy": 0.6834,
+      "precision_unsafe": 0.9507,
+      "recall_unsafe": 0.9905,
+      "f1_unsafe": 0.9702,
+      "roc_auc": 0.9614
+    },
+    "Decision Tree": {
+      "accuracy": 0.9879,
+      "balanced_accuracy": 0.9928,
+      "precision_unsafe": 0.9999,
+      "recall_unsafe": 0.987,
+      "f1_unsafe": 0.9934,
+      "roc_auc": 0.9929
+    }
+  },
+  "baseline_accuracy": 0.9238,
+  "importance": {
+    "turbidity": 0.07761389192810601,
+    "ph": 0.07820318021684855,
+    "chlorine": 0.08291245285126896,
+    "sulfate": 0.11737300967705906,
+    "organic_carbon": 0.1255954591165159,
+    "hardness": 0.12621388160134211,
+    "trihalomethanes": 0.15239372947951013,
+    "tds": 0.16786236271596167,
+    "conductivity": 0.20061050861586507
+  }
+}

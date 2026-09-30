@@ -1,0 +1,73 @@
+{
+  "features": [
+    "ph",
+    "hardness",
+    "tds",
+    "chlorine",
+    "sulfate",
+    "conductivity",
+    "organic_carbon",
+    "trihalomethanes",
+    "turbidity"
+  ],
+  "model": "Decision Tree",
+  "class_labels": {
+    "0": "Safe",
+    "1": "Unsafe"
+  },
+  "ranges": {
+    "ph": [
+      5.13,
+      9.78,
+      7.24
+    ],
+    "hardness": [
+      24.76,
+      1051.5504999999996,
+      271.585
+    ],
+    "tds": [
+      29.755200000000002,
+      1063.6767999999995,
+      270.03
+    ],
+    "chlorine": [
+      0.05,
+      8.06,
+      2.41
+    ],
+    "sulfate": [
+      16.3662,
+      755.9146000000001,
+      236.67
+    ],
+    "conductivity": [
+      28.641199999999998,
+      28396.992800000004,
+      1437.44
+    ],
+    "organic_carbon": [
+      0.22,
+      16.49,
+      7.31
+    ],
+    "trihalomethanes": [
+      1.2,
+      218.45009999999994,
+      68.01
+    ],
+    "turbidity": [
+      0.08,
+      12.76,
+      2.66
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.9879,
+    "balanced_accuracy": 0.9928,
+    "precision_unsafe": 0.9999,
+    "recall_unsafe": 0.987,
+    "f1_unsafe": 0.9934,
+    "roc_auc": 0.9929
+  }
+}
